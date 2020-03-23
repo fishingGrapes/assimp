@@ -294,6 +294,9 @@ namespace glTF {
         }
     }
 
+#pragma warning(push)
+#pragma warning(disable : 4065)
+
     inline void Write(Value& obj, Mesh& m, AssetWriter& w)
     {
 		/********************* Name **********************/
@@ -385,6 +388,7 @@ namespace glTF {
 
         obj.AddMember("primitives", primitives, w.mAl);
     }
+#pragma warning(pop)
 
     inline void Write(Value& obj, Node& n, AssetWriter& w)
     {
